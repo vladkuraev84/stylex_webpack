@@ -3,6 +3,7 @@
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/button";
+@import "utils/burger";
 
 html {
   line-height: $mainLineHeight;
@@ -99,6 +100,8 @@ section, .section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  //padding-top: 70px;
 }
 
 .container {
@@ -131,5 +134,12 @@ section, .section {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
+.white {
+  color: $wh;
+}
 // Modules
 @import "modules/wrapper.scss";

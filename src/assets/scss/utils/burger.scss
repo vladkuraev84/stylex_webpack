@@ -54,40 +54,57 @@ $blueDot: #212121;
 ========================================= */
 
 .menu-icon {
-  position: fixed;
-  top: 40px;
-  right: 0;
+  position: relative;
+  left: 0;
   cursor: pointer;
-  @include transform(translate(-50%, -50%));
-  width: 35px;
+  //@include transform(translate(-50%, -50%));
+  //width: 35px;
   height: 35px;
   z-index: 7;
+  flex: none;
 
-  @media only screen and (min-width: 991px) {
+  @media only screen and (min-width: 981px) {
     display: none;
   }
 
-  .dot {
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+
+  @include flex(center, center, center, nowrap);
+
+  span {
+    color: #ffffff;
+    text-transform: none !important;
+  }
+
+  &--line {
+    width: 18px;
+    position: relative;
+    margin-right: 6px;
+  }
+
+  .line {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: $blueDot;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $wh;
     border-radius: 3px;
-    @include transform(translate(-50%, -50%));
-    @include transition(margin .4s ease .4s, width .4s ease);
+    @include transform(translateY(-50%));
+    //@include transition(margin .4s ease .4s, width .4s ease);
 
     &:nth-of-type(1) {
-      margin-top: -10px;
-      margin-left: 0px;
-      @include transform(translate(-50%, -50%) rotate(45deg));
+      margin-top: -5px;
+      margin-left: 0;
+      //@include transform(translate(-50%, -50%) rotate(45deg));
     }
 
     &:nth-of-type(3) {
-      margin-top: 10px;
+      margin-top: 5px;
       //margin-left: 12px;
-      @include transform(translate(-50%, -50%) rotate(-45deg));
+      //@include transform(translate(-50%, -50%) rotate(-45deg));
     }
 
   }
@@ -110,7 +127,7 @@ $blueDot: #212121;
     }*/
 }
 
-@media only screen and (max-width: 990px) {
+/*@media only screen and (max-width: 990px) {
   .wrapper {
     &.open--menu {
       //height: 100vh;
@@ -143,5 +160,5 @@ $blueDot: #212121;
       }
     }
   }
-}
+}*/
 

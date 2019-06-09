@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+${require('./views/head.html')}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<!-- main wrapper -->
+<div class="wrapper">
+  <div id="app">
+
+    <div class="content-wrapper">
+
+      <div class="background__block--wr">
+        ${require('./views/header.html')}
+
+        <div class="background__block">
+
+          <div class="background__item" style="filter: blur(6px);-webkit-filter: blur(6px);"></div>
+
+          <div class="background__item--txt text-center ">
+            <div class="container">
+              <h1 class="tittle white">Войти через социальные сети:</h1>
+              <div class="text-center">
+                <div class="social--login">
+                  <ul>
+                    <li>
+                      <a href=""><i class="fa fa-twitter fa-fw"></i></a>
+                    </li>
+                    <li>
+                      <a href="/"><i class="fa fa-odnoklassniki fa-fw"></i></a>
+                    </li>
+                    <li>
+                      <a href="/"><i class="fa fa-facebook fa-fw"></i></a>
+                    </li>
+                    <li>
+                      <a href="/"><i class="fa fa-vk fa-fw"></i></a>
+                    </li>
+                    <li>
+                      <a href="/"><i class="fa fa-google-plus fa-fw"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+
+      </section>
+
+      ${require('./views/footer.html')}
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

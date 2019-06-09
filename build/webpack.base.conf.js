@@ -142,6 +142,10 @@ module.exports = {
         filename: 'reporting.html',
         template: '!!html-loader?interpolate!src/reporting.html'
     }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'login.html',
+        template: '!!html-loader?interpolate!src/login.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
