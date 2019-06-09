@@ -20,3 +20,12 @@
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
 }
+
+
+@mixin flex( $j-cont:space-between, $align:center, $fl-dir:row, $fl-wr:wrap) {
+  display: flex;
+  justify-content: $j-cont;
+  align-items: $align;
+  flex-direction: $fl-dir;
+  flex-wrap: $fl-wr;
+}

@@ -2,6 +2,7 @@
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
+@import "utils/button";
 
 html {
   line-height: $mainLineHeight;
@@ -35,10 +36,42 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 a { text-decoration: none; }
 
+button, a {
+
+  @media only screen and (min-width: 768px) {
+
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+
+    &:after, &:before {
+      -webkit-transition: .35s;
+      -moz-transition: .35s;
+      -ms-transition: .35s;
+      -o-transition: .35s;
+      transition: .35s;
+    }
+
+  }
+
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+}
 ul, li {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 section, .section {
@@ -82,6 +115,19 @@ section, .section {
   }
   @media screen and (max-width: $phoneWidth) {
     max-width: $smPhoneWidth;
+  }
+}
+
+.title {
+  font-size: 46px;
+  text-transform: initial;
+  font-family: $Fontlight;
+
+
+  &--sub {
+    font-family: $Fontlight;
+    font-size: 36px;
+    font-style: normal;
   }
 }
 

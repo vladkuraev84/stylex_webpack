@@ -1,0 +1,39 @@
+.btn {
+    display: inline-block;
+    padding: .5rem 1.95rem;
+    color: $wh;
+    background: transparent;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $FontMedium;
+
+    @media only screen and (min-width: 768px) {
+        &:hover {
+            background: transparent;
+            -webkit-transition: .35s all;
+            -moz-transition: .35s all;
+            -ms-transition: .35s all;
+            -o-transition: .35s all;
+            transition: .35s all;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+        white-space: normal;
+    }
+}
+
+.btn--green {
+
+}

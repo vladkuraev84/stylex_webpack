@@ -59,11 +59,15 @@ module.exports = {
         name: '[name].[ext]'
       }
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
-      }
+        test: /\.(png|jpg|jpeg|svg|gif)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
+            }
+        ]
     }, {
       test: /\.scss$/,
       use: [
@@ -117,6 +121,26 @@ module.exports = {
     new HtmlWebpackPlugin({  // Also generate a test.html
         filename: 'about.html',
         template: '!!html-loader?interpolate!src/about.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'about.html',
+        template: '!!html-loader?interpolate!src/about.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'analysis.html',
+        template: '!!html-loader?interpolate!src/analysis.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'career.html',
+        template: '!!html-loader?interpolate!src/career.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'contacts.html',
+        template: '!!html-loader?interpolate!src/contacts.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'reporting.html',
+        template: '!!html-loader?interpolate!src/reporting.html'
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
