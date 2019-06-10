@@ -141,5 +141,24 @@ section, .section {
 .white {
   color: $wh;
 }
+
+.green {
+  color: #36aa3e;
+}
+
+.borderSmall {
+  position: relative;
+  margin-bottom: 26px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -13px;
+      width: 88px;
+      height: 2px;
+      background: #36aa3e;
+    }
+}
 // Modules
 @import "modules/wrapper.scss";

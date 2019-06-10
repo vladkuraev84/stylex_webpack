@@ -1,0 +1,12 @@
+
+.why {
+  ul {
+    @include flex(space-between, center, row, nowrap);
+
+    @media screen and (max-width: $smDesktopWidth) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+  }
+
+}

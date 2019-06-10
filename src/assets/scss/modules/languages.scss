@@ -95,7 +95,6 @@
       a {
         padding: 5px;
         font-size: 15px;
-        color: inherit;
       }
     }
   }
@@ -122,7 +121,7 @@
       padding: 0;
       font-size: 0;
       width: 100%;
-      color: $wh;
+      //color: $wh;
 
       -webkit-transition: .35s all;
       -moz-transition: .35s all;

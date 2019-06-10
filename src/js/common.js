@@ -56,3 +56,14 @@ document.addEventListener('click', e => {
         toggleLanguages();
     }
 });*/
+
+let videoBlock = document.querySelector(".video .container");
+let videoBlur = document.querySelector(".bgBlur--light");
+let videoContext = document.querySelector(".video--block__content");
+let video = document.getElementById("video");
+
+videoBlock.addEventListener('click', function () {
+    videoBlur.classList.remove('bgBlur--light');
+    videoContext.style.display = "none";
+    // video.setAttribute('autoplay', '1');
+});

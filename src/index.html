@@ -27,21 +27,31 @@ ${require('./views/head.html')}
           </div>
         </div>
 
-        <section id="main">
+        <section class="why">
           <div class="container">
-            <h1>Webpack</h1>
-            <!--<img src="assets/img/dog.jpg" alt="">-->
-            <p>Test fonts</p>
-            <!-- toggle expamle component -->
-            <!--<button @click="showExampleComponent = !showExampleComponent" class="btn btn-primary">Toggle Vue Example Component</button>-->
+            ${require('./views/index_why.html')}
           </div>
         </section>
-        <!--<example-component v-if="showExampleComponent"></example-component>-->
+
+        <section class="video">
+          <div class="container">
+            ${require('./views/index_video.html')}
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+
+          </div>
+        </section>
 
         ${require('./views/footer.html')}
       </div>
     </div>
   </div>
+  <!-- toggle expamle component -->
+  <!--<button @click="showExampleComponent = !showExampleComponent" class="btn btn-primary">Toggle Vue Example Component</button>-->
+  <!--<img src="assets/img/dog.jpg" alt="">-->
 
 </body>
 </html>
