@@ -35,13 +35,11 @@
     border-radius: 50%;
     padding: 8px;
     color: $wh;
-    border-width: 3px;
-    border-style: solid;
-    border-left-color: #38b870;
-    border-top-color: #38b870;
-    border-right-color: #22b6b4;
-    border-bottom-color: #38b870;
     font-size: 32px;
+    background-image: url("/assets/img/social-icon-border.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     
       &:hover {
         text-decoration: none;
