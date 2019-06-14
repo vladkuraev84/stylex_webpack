@@ -1,12 +1,22 @@
 
 .video {
   position: relative;
+  background: #f3f3f3;
+
+  .title {
+    margin-bottom: 26px;
+  }
 
   iframe {
     width: 100%;
   }
 
   &--block {
+
+    &__wr {
+      position: relative;
+    }
+
     &__content {
       position: absolute;
       left: 0;

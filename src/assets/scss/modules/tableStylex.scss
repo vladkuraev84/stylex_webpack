@@ -1,0 +1,124 @@
+
+.table {
+
+  &--block {
+    .title {
+      margin-bottom: 24px;
+    }
+  }
+
+}
+
+.tableStylex {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+
+    @media screen and (max-width: $phoneBigWidth) {
+      display: none;
+    }
+
+    td {
+      color: #ffffff;
+      background: #000000;
+    }
+    tr {
+      &.table__whiteLine {
+        td {
+          background: #ffffff;
+          padding: 2px;
+        }
+      }
+    }
+  }
+
+  p {
+    @include flex(flex-start, center, row, nowrap);
+    margin: 0;
+
+      span {
+        white-space: nowrap;
+      }
+  }
+
+
+  td {
+    padding: 8px 14px;
+    min-width: 185px;
+
+      @media screen and (min-width: $tableWidth) {
+        border-top: solid 2px #ffffff;
+        border-bottom: solid 2px #ffffff;
+        text-align: center;
+        min-width: auto;
+
+          span {
+            display: none;
+            text-transform: uppercase;
+          }
+      }
+  }
+
+  tbody {
+    tr {
+      background: #f0f0f0;
+
+      &.bg__success {
+        background: $success-color;
+      }
+    }
+  }
+
+  tr {
+    @media screen and (max-width: $phoneBigWidth) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      margin: 5px 0;
+    }
+
+    td {
+      @media screen and (min-width: $tableWidth) {
+        &:first-child {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        &:last-child {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+
+      @media screen and (max-width: $phoneBigWidth) {
+        width: 50%;
+      }
+
+      &.table__id {
+        @media screen and (max-width: $phoneBigWidth) {
+          display: none;
+        }
+      }
+
+      &.table__date {
+        @media screen and (max-width: $phoneBigWidth) {
+          //display: table-row;
+          width: 100%;
+
+            p {
+              font-size: 1.25rem;
+            }
+        }
+      }
+    }
+  }
+
+}

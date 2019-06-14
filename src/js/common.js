@@ -57,7 +57,7 @@ document.addEventListener('click', e => {
     }
 });*/
 
-let videoBlock = document.querySelector(".video .container");
+let videoBlock = document.querySelector(".video--block__wr");
 let videoBlur = document.querySelector(".bgBlur--light");
 let videoContext = document.querySelector(".video--block__content");
 let video = document.getElementById("video");
