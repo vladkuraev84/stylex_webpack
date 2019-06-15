@@ -21,7 +21,7 @@
   z-index: 10;
 
   .container {
-    @include flex(space-between, center, center, nowrap);
+    @include flex(space-between, center, row, nowrap);
   }
 
   a, p, span {
