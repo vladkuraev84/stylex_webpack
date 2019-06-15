@@ -23,6 +23,10 @@
     &--nav {
       margin: 0 25px;
 
+      li {
+        min-width: 50%;
+      }
+
       @media screen and (max-width: $phoneBigWidth) {
         margin: 20px 0;
 
@@ -64,7 +68,6 @@
 
         li {
           flex: none;
-          min-width: 50%;
         }
     }
 
@@ -78,7 +81,7 @@
       }
 
       img {
-        max-width: 50px;
+        width: 50px;
       }
     }
 

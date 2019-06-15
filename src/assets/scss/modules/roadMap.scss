@@ -23,41 +23,36 @@
       background: linear-gradient(135deg, #38b86f 0%, #22b6b4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin: 0;
+      margin: 0px 0 0;
+      line-height: 1.3;
     }
     span {
       font-size: 16px;
-      max-width: 120px;
+      max-width: 260px;
+      line-height: 1.5;
       margin-left: auto;
       margin-right: auto;
     }
 
     em {
-      margin-top: 12px;
-      margin-bottom: 12px;
+      margin-top: 15px;
+      margin-bottom: 16px;
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
       border: 5px solid transparent;
       position: relative;
-
-
-      //-moz-border-image: -moz-linear-gradient(135deg, #38b86f 0%, #22b6b4 100%);
-      //-webkit-border-image: -webkit-linear-gradient(135deg, #38b86f 0%, #22b6b4 100%);
-      //border-image: linear-gradient(135deg, #38b86f 0%, #22b6b4 100%);
-
       background: linear-gradient(135deg, #38b86f 0%, #22b6b4 100%);
-
 
         &:before {
           content: '';
           position: absolute;
           background: #ffffff;
-          width: 10px;
-          height: 10px;
+          width: 12px;
+          height: 12px;
           top: 0;
           right: 0;
           bottom: 0;
@@ -69,12 +64,41 @@
   }
 
   &--list {
-    ul {
-      @include flex(flex-start, flex-start, row, wrap);
+    @include flex(flex-start, flex-start, row, wrap);
+    margin: 0;
+
+    background-image: url("/assets/img/line3.png");
+    background-repeat: no-repeat;
+    background-position: center 8.2rem;
+    background-size: 76rem 32.4rem;
+
+    @media screen and (max-width: 1264px) {
+      background-size: 72rem 32.4rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      background-size: 66.5rem 32.4rem;
     }
 
     li {
       @include flex(center, center, column, wrap);
+      flex: auto;
+      width: calc(25% - 50px);
+      margin: 58px 0 48px;
+
+      &.roadMap__item-1, &.roadMap__item-5, &.roadMap__item-9 {
+        margin-left: 64px;
+      }
+
+      &.roadMap__item-4, &.roadMap__item-8, &.roadMap__item-12 {
+        margin-right: 64px;
+      }
+
+      &.roadMap__item-9, &.roadMap__item-10, &.roadMap__item-11, &.roadMap__item-12 {
+        margin-top: 38px;
+
+      }
+
     }
   }
 }
