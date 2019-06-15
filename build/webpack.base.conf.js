@@ -152,4 +152,4 @@ module.exports = {
       { from: `${PATHS.src}/static`, to: '' },
     ])
   ],
-}
+};
