@@ -28,6 +28,9 @@
       margin-right: 0;
       margin-left: auto;
 
+      .title {
+        margin-bottom: 1rem;
+      }
 
       @media screen and (max-width: $phoneBigWidth) {
         max-width: none;

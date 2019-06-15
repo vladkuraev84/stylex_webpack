@@ -1,0 +1,23 @@
+
+.overFoot {
+  &__section {
+    background-image: url("/assets/img/bacgroundFoot.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    span {
+      font-size: 1rempx;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  }
+}
