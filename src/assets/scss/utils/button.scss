@@ -47,3 +47,19 @@
         }
     }
 }
+.btnStylex__border {
+
+    text-transform: uppercase;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #ffffff;
+
+
+    @media only screen and (min-width: 768px) {
+        &:hover {
+            color: $wh;
+            background: linear-gradient(135deg, #22b6b4 0%, #38b870 100%);
+        }
+    }
+}

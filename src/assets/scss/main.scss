@@ -134,8 +134,30 @@ section, .section {
   }
 }
 
+.title__border--sm {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      bottom: 0;
+      width: 7.7rem;
+      height: 2px;
+      background: $light-color;
+    }
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-center__mob {
+  @media screen and (max-width: $phoneBigWidth) {
+    text-align: center;
+  }
 }
 
 .white {
@@ -158,6 +180,22 @@ section, .section {
       width: 88px;
       height: 2px;
       background: #36aa3e;
+    }
+}
+
+.d-block--mob {
+  display: none!important;
+
+    @media screen and (max-width: $phoneBigWidth) {
+      display:block !important;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+}
+
+.d-none--mob {
+    @media screen and (max-width: $phoneBigWidth) {
+      display: none!important;
     }
 }
 // Modules

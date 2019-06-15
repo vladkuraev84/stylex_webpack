@@ -1,0 +1,33 @@
+
+.fintradeCenter {
+  &__section {
+    padding: 0;
+  }
+
+  &--block {
+    @include flex(center, stretch, row, nowrap);
+
+    >div {
+      width: 50%;
+
+      @media screen and (max-width: $phoneBigWidth) {
+        width: 100%;
+      }
+    }
+
+    &__img {
+      background-image: url("/assets/img/work.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    &__content {
+      padding: 2.5rem 2rem;
+      max-width: 600px;
+
+      @media screen and (max-width: $phoneBigWidth) {
+        max-width: none;
+      }
+    }
+  }
+}

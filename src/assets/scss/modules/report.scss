@@ -1,0 +1,17 @@
+
+.report {
+  &__section {
+    background: linear-gradient(135deg, #38b870 0%, #22b6b4 100%);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  &--block {
+    max-width: 660px;
+    margin: auto;
+
+      p {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+  }
+}
