@@ -4,6 +4,7 @@
 @import "utils/fonts";
 @import "utils/button";
 @import "utils/burger";
+@import "utils/slickfix";
 
 html {
   line-height: $mainLineHeight;
@@ -201,8 +202,5 @@ section, .section {
 // Modules
 @import "modules/wrapper.scss";
 
-/*$slick-font-path: "/node_modules/slick-carousel/slick/fonts/" !default;
-$slick-font-family: "slick" !default;
-$slick-loader-path: "/node_modules/slick-carousel/slick/" !default;
-$slick-arrow-color: black !default;*/
+
 

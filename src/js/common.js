@@ -67,3 +67,20 @@ videoBlock.addEventListener('click', function () {
     videoContext.style.display = "none";
     // video.setAttribute('autoplay', '1');
 });
+
+
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+
+require('slick-carousel');
+
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $('.slider').slick(
+        {
+            autoPlay: true
+        }
+    )
+});

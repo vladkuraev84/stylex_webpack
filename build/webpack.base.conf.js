@@ -51,7 +51,10 @@ module.exports = {
       }
     }, {
         test: /\.html$/, // tells webpack to use this loader for all ".html" files
-        loader: 'html-loader'
+        loader: 'html-loader',
+        options: {
+            attrs: ['img:src', 'link:href']
+        }
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
@@ -59,12 +62,13 @@ module.exports = {
         name: '[name].[ext]'
       }
     }, {
-        test: /\.(png|jpg|jpeg|svg|gif)$/,
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
         use: [
             {
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name].[ext]'
+                    // name: '.[name].[ext]'
+                    name:`${PATHS.assets}img/[name].[ext]`
                 }
             }
         ]

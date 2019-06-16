@@ -1,4 +1,5 @@
 // JS - ./js/index.js
+
 import './js/'
 
 // SCSS
@@ -30,3 +31,4 @@ const app = new Vue({
   el: '#app'
 })
 */
+
