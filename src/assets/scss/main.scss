@@ -4,6 +4,7 @@
 @import "utils/fonts";
 @import "utils/button";
 @import "utils/burger";
+@import "utils/input";
 @import "utils/slickfix";
 
 html {
@@ -74,6 +75,10 @@ ul, li {
 img {
   max-width: 100%;
   height: auto;
+}
+
+strong {
+  font-family: 'Roboto-Bold', sans-serif !important;
 }
 
 section, .section {
@@ -166,7 +171,15 @@ section, .section {
 }
 
 .green {
-  color: #36aa3e;
+  color: #2db793;
+}
+
+.red {
+  color: $red;
+}
+
+.mt50 {
+  margin-top: 3.125rem;
 }
 
 .borderSmall {

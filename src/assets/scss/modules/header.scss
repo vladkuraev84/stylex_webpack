@@ -2,7 +2,7 @@
 
 .background__block--wr {
   .header {
-    a, p, span, .languages-block .ar:after {
+    a, p, span, .languages-block span, .languages-block a, .languages-block .ar:after {
       color: $wh;
       border-color: $wh;
     }
@@ -93,6 +93,12 @@
       background: rgba(0, 0, 0, 0.5);
       padding: 6px;
       width: 75px;
+    }
+  }
+
+  .languages-block {
+    a, span {
+      color: #212121;
     }
   }
 

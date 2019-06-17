@@ -61,13 +61,13 @@ let videoBlock = document.querySelector(".video--block__wr");
 let videoBlur = document.querySelector(".bgBlur--light");
 let videoContext = document.querySelector(".video--block__content");
 let video = document.getElementById("video");
-
-videoBlock.addEventListener('click', function () {
-    videoBlur.classList.remove('bgBlur--light');
-    videoContext.style.display = "none";
-    // video.setAttribute('autoplay', '1');
-});
-
+if (videoBlock) {
+    videoBlock.addEventListener('click', function () {
+        videoBlur.classList.remove('bgBlur--light');
+        videoContext.style.display = "none";
+        // video.setAttribute('autoplay', '1');
+    });
+}
 
 import $ from 'jquery';
 window.jQuery = $;
@@ -82,5 +82,35 @@ $( document ).ready(function() {
         {
             autoPlay: true
         }
-    )
+    );
+
+    /*$(".openBlock-icon").click(function() {
+        $(this).toggleClass('open');
+        $(".actual-tasks--item__bot").show(300);
+    })*/
+
+    $('.actual-tasks--item__top .actual-tasks--item__top__pay .openBlock-icon').click(function() {
+        $(this).toggleClass('open');
+        let parent = $(this).parent().parent().parent();
+        // console.log(parent);
+        parent.find('.actual-tasks--item__bot').slideToggle();
+        $(".actual-tasks--item__top .actual-tasks--item__top__pay .openBlock-icon.open").not(parent).find('.actual-tasks--item__bot').removeClass("open").slideUp();
+    });
+});
+
+const uploadButton = document.querySelector('.browse-btn');
+const fileInfo = document.querySelector('.file-info');
+const realInput = document.getElementById('real-input');
+
+uploadButton.addEventListener('click', () => {
+    realInput.click();
+});
+
+realInput.addEventListener('change', () => {
+    const name = realInput.value.split(/\\|\//).pop();
+    const truncated = name.length > 20
+        ? name.substr(name.length - 20)
+        : name;
+
+    fileInfo.innerHTML = truncated;
 });
