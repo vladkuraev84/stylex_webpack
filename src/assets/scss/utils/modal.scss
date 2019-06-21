@@ -1,0 +1,106 @@
+
+.modal--tasks {
+  &__wr {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &__close {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background: rgba(0,0,0,.5);
+  }
+
+  &__block {
+    position: relative;
+    z-index: 10;
+    padding: 30px;
+    background: #ffffff;
+    min-width: 270px;
+    max-width: 360px;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 560px) {
+      max-width: 270px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: 'Roboto-Light', sans-serif;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+
+  .input--block {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+
+    @media screen and (max-width: 767px) {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .input--item {
+    height: auto;
+    margin: 0;
+  }
+
+  label {
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #212121;
+    cursor: pointer;
+
+
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+
+  .input--block input {
+    @media screen and (max-width: 767px) {
+      height: 32px;
+    }
+  }
+
+  .textarea--block textarea {
+    @media screen and (max-width: 767px) {
+      max-height: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .btnSimple {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      font-size: 12px;
+    }
+  }
+
+}

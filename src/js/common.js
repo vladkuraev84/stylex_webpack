@@ -114,3 +114,21 @@ realInput.addEventListener('change', () => {
 
     fileInfo.innerHTML = truncated;
 });
+
+$( document ).ready(function() {
+
+    $('.openBlock-icon').click(function() {
+        $(this).toggleClass('open');
+        let parent = $(this).parent().parent().parent();
+        // console.log(parent);
+        parent.find('.actual-tasks--item__bot').slideToggle();
+        $(".openBlock-icon.open").not(parent).find('.actual-tasks--item__bot').removeClass("open").slideUp();
+    });
+
+    $('.openBlockTasks-icon').click(function() {
+        $(this).toggleClass('open');
+        $(this).parent().toggleClass('open__bot');
+        let parent = $(this).parent().parent();
+        parent.find('.tasks--item__bot').slideToggle();
+    });
+});

@@ -1,0 +1,133 @@
+$green:  green;
+
+.tasks {
+  .title {
+    margin-bottom: 54px;
+  }
+
+  &--subTitle {
+    font-size: 22px;
+    font-family: 'Roboto-Bold', sans-serif;
+    margin: 0 0 24px;
+    padding: 0;
+  }
+
+  &--item {
+    &__top {
+      @include flex(space-between, center, row, nowrap);
+      margin: 25px 0;
+
+      p, span {
+        font-family: 'Roboto-Light', sans-serif;
+      }
+
+      p {
+        font-size: 24px;
+        color: #212121;
+        flex: 1;
+        max-width: 30%;
+        min-width: 170px;
+      }
+
+      span {
+        font-size: 18px;
+        color: #909090;
+        width: 40%;
+        max-width: 200px;
+      }
+
+      &.open__bot {
+        p {
+          color: $green;
+        }
+      }
+    }
+
+    &__bot {
+      padding: 10px;
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        padding: 30px;
+      }
+
+      ul {
+        margin-bottom: 24px;
+        margin-left: 20px;
+      }
+
+      li {
+        list-style-type: disc;
+        line-height: 1.65;
+        list-style-position: inside;
+
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+
+.openBlock-icon, .openBlockTasks-icon {
+  display: inline-block;
+  margin-left: 42px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: all ease 0.5s;
+  cursor: pointer;
+
+  &::before,&::after{
+    content:"";
+    position: absolute;
+    height: inherit;
+    border-radius: inherit;
+    background-color: #a6a6a6;
+    margin: auto;
+    width: 3px;
+    transition: all ease 0.5s;
+    top: -1px;
+    left: 10px;
+    transform-origin: left;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    left: 9px;
+    bottom: 0;
+    transform: rotateZ(0deg);
+  }
+
+  &.open{
+    &::after{
+      top: -1px;
+      left: 10px;
+      transform-origin: left;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.openBlockTasks-icon {
+  margin-left: 8px;
+
+  &::before,&::after {
+    background-color: $green;
+  }
+
+  &.open {
+    &::before,&::after {
+      background-color: #a6a6a6;
+    }
+  }
+}
