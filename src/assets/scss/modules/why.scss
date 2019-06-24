@@ -11,6 +11,16 @@
     }
   }
 
+  iframe {
+    width: 100%;
+  }
+
+  li {
+    @media screen and (max-width: $phoneBigWidth) {
+      width: 100%;
+    }
+  }
+
   ul {
     @include flex(space-between, center, row, nowrap);
 

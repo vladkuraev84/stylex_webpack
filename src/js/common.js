@@ -106,7 +106,7 @@ const fileInfo = document.querySelector('.file-info');
 
 uploadButton.addEventListener('click', () => {
     realInput.click();
-});*/
+});
 
 realInput.addEventListener('change', () => {
     const name = realInput.value.split(/\\|\//).pop();
@@ -115,7 +115,7 @@ realInput.addEventListener('change', () => {
         : name;
 
     fileInfo.innerHTML = truncated;
-});
+});*/
 
 $( document ).ready(function() {
 

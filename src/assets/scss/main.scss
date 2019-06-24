@@ -135,6 +135,18 @@ section, .section {
   font-family: 'Roboto-Light', sans-serif;
   margin-bottom: 3.375rem;
 
+  @media screen and (max-width: $phoneBigWidth) {
+    font-size: 42px;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 32px;
+  }
+
 
   &--sub {
     font-family: 'Roboto-Light', sans-serif;
@@ -200,6 +212,10 @@ section, .section {
       height: 2px;
       background: #dadada;
     }
+}
+
+.display-flex {
+  @include flex(flex-start, flex-start, row, nowrap);
 }
 
 .d-block--mob {

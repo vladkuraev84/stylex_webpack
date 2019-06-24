@@ -28,6 +28,11 @@
       margin-right: 0;
       margin-left: auto;
 
+      @media screen and (max-width: $phoneBigWidth) {
+        width: 100%;
+        padding: 50px 15px;
+      }
+
       .title {
         margin-bottom: 2.5rem;
       }
