@@ -1,6 +1,9 @@
 .btnStylex {
-    display: inline-block;
-    padding: 12px 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 188px;
+    padding: 13px 36px;
     color: $wh;
     background: transparent;
     text-decoration: none;
@@ -10,7 +13,7 @@
     margin: 0;
     cursor: pointer;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     font-family: $FontMedium;
     -webkit-border-radius: 36px;
@@ -53,7 +56,9 @@
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
+    padding-top: 11px;
+    padding-bottom: 11px;
 
 
     @media only screen and (min-width: 768px) {
@@ -61,5 +66,9 @@
             color: $wh;
             background: linear-gradient(135deg, #22b6b4 0%, #38b870 100%);
         }
+    }
+
+    &:focus, &:focus-within, &:visited {
+        border: 2px solid #ffffff;
     }
 }

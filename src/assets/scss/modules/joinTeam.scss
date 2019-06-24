@@ -23,13 +23,21 @@
       background-size: cover;
     }
     &__content {
-      padding: 2.5rem 2rem;
+      padding: 5.375rem 5.625rem;
       max-width: 600px;
       margin-right: 0;
       margin-left: auto;
 
       .title {
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      p {
+        margin-bottom: 2.25rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
       }
 
       @media screen and (max-width: $phoneBigWidth) {

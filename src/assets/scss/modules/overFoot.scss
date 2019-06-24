@@ -5,19 +5,19 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6.125rem;
+    padding-bottom: 4.625rem;
 
     p {
-      font-size: 2rem;
-      margin-bottom: 8px;
+      font-size: 1.375rem;
+      margin-bottom: 1rem;
+      font-family: $Fontlight, sans-serif;
     }
 
     span {
-      font-size: 1rempx;
       font-weight: 600;
       display: inline-block;
-      margin-bottom: 1rem;
+      margin-bottom: 1.875rem;
     }
   }
 }

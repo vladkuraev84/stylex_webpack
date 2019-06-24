@@ -5,6 +5,12 @@
     margin-bottom: 1.375rem;
   }
 
+  &--txt {
+    @media screen and (min-width: $tableWidth) {
+      padding: 0 1rem;
+    }
+  }
+
   ul {
     @include flex(space-between, center, row, nowrap);
 

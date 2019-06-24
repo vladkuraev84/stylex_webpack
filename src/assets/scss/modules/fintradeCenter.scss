@@ -22,8 +22,16 @@
       background-size: cover;
     }
     &__content {
-      padding: 2.5rem 2rem;
+      padding: 4.875rem 3.125rem;
       max-width: 600px;
+
+      p {
+        margin-bottom: 1.625rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+      }
 
       @media screen and (max-width: $phoneBigWidth) {
         max-width: none;
