@@ -1,6 +1,10 @@
 
 .why {
 
+  .title {
+    margin-bottom: 1.375rem;
+  }
+
   ul {
     @include flex(space-between, center, row, nowrap);
 

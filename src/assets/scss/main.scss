@@ -27,7 +27,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: $mainFont;
+  font-family: 'Roboto-Regular', sans-serif;
 	font-size: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
@@ -84,7 +84,8 @@ strong {
 
 section, .section {
   position: relative;
-  padding: 40px 0;
+  padding: 80px 0;
+
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }
@@ -131,11 +132,12 @@ section, .section {
 .title {
   font-size: 46px;
   text-transform: initial;
-  font-family: $Fontlight;
+  font-family: 'Roboto-Light', sans-serif;
+  margin-bottom: 3.375rem;
 
 
   &--sub {
-    font-family: $Fontlight;
+    font-family: 'Roboto-Light', sans-serif;
     font-size: 36px;
     font-style: normal;
   }
@@ -172,7 +174,7 @@ section, .section {
 }
 
 .green {
-  color: #2db793;
+  color: #26b6a6;
 }
 
 .red {
@@ -185,16 +187,18 @@ section, .section {
 
 .borderSmall {
   position: relative;
-  margin-bottom: 26px;
+  margin-bottom: 43px;
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 1.375rem;
 
     &:after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -13px;
-      width: 88px;
+      bottom: -17px;
+      width: 98px;
       height: 2px;
-      background: #36aa3e;
+      background: #dadada;
     }
 }
 
