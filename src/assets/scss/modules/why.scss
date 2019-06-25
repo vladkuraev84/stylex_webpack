@@ -16,6 +16,8 @@
   }
 
   li {
+    width: 50%;
+
     @media screen and (max-width: $phoneBigWidth) {
       width: 100%;
     }

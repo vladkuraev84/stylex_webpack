@@ -9,9 +9,30 @@
 
   iframe {
     width: 100%;
+
+    @media screen and (min-width: 768px) and (max-width: 1260px) {
+      height: 23.5rem;
+    }
+
+    @media screen and (min-width: 551px)  and (max-width: 767px) {
+      height: 24.5rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      height: 18.5rem;
+    }
   }
 
   &--block {
+
+    @media screen and (min-width: 768px) and (max-width: 1260px) {
+      width: 700px;
+      margin: auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
 
     &__wr {
       position: relative;

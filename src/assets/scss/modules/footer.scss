@@ -6,7 +6,7 @@
     .container {
       @include flex(space-between, center, center, nowrap);
 
-      @media screen and (max-width: $phoneBigWidth) {
+      @media screen and (max-width: 840px) {
         flex-direction: column;
         justify-content: center;
       }
@@ -15,7 +15,7 @@
     .copyright {
       margin: 0 15px;
 
-      @media screen and (max-width: $phoneBigWidth) {
+      @media screen and (max-width: 840px) {
         margin: 20px 0;
       }
     }
@@ -27,7 +27,11 @@
         min-width: 50%;
       }
 
-      @media screen and (max-width: $phoneBigWidth) {
+      @media screen and (max-width: 1060px) {
+        margin: 0 15px;
+      }
+
+      @media screen and (max-width: 840px) {
         margin: 20px 0;
 
           ul {
@@ -81,8 +85,16 @@
         margin: 5px;
       }
 
+      a {
+        font-size: 0;
+      }
+
       img {
         width: 50px;
+
+        @media screen and (max-width: 1060px) {
+          width: 36px;
+        }
       }
     }
 

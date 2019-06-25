@@ -1,0 +1,17 @@
+
+.customPage {
+  h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto-Light', sans-serif;
+    margin-bottom: 1.2rem;
+  }
+  p {
+    margin-bottom: .8rem;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    list-style-type: disc;
+    line-height: 2.4;
+  }
+}

@@ -12,6 +12,10 @@
 
   &--block {
 
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+      margin: 0 -1%;
+    }
+
     p, span, em {
       line-height: 1;
       padding: 0;
@@ -26,6 +30,10 @@
       margin: 0px 0 0;
       line-height: 1.3;
 
+      @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 28px;
+      }
+
       @media screen and (max-width: $phoneBigWidth) {
         font-size: 26px;
         line-height: 1.2;
@@ -37,6 +45,11 @@
       line-height: 1.5;
       margin-left: auto;
       margin-right: auto;
+      max-height: 50px;
+
+      @media screen and (min-width: 768px) and (max-width: 980px) {
+        font-size: 12px;
+      }
 
       @media screen and (max-width: $phoneBigWidth) {
         font-size: 15px;
@@ -86,13 +99,30 @@
     background-position: center 8.2rem;
     background-size: 76rem 32.4rem;
 
-    @media screen and (max-width: 1264px) {
+    @media screen and (min-width: 1201px)  and (max-width: 1264px) {
       background-size: 72rem 32.4rem;
     }
 
-    @media screen and (max-width: 1200px) {
-      background-size: 66.5rem 32.4rem;
+    @media screen and (min-width: 1061px) and (max-width: 1200px) {
+      background-size: 64.5rem 32.4rem;
     }
+
+    @media screen and (min-width: 981px) and (max-width: 1060px) {
+      background-size: 59.5rem 32.4rem;
+    }
+
+    /*@media screen and (max-width: 1000px) {
+      background-size: 45.5rem 29.4rem;
+    }*/
+
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+      background-size: 45.5rem 29.4rem;
+      background-position: center 7.7rem;
+    }
+
+      /*@media screen and (max-width: 960px) {
+        background-size: 58.5rem 32.4rem;
+      }*/
 
     li {
       @include flex(center, center, column, wrap);
@@ -109,8 +139,12 @@
       }
 
       &.roadMap__item-9, &.roadMap__item-10, &.roadMap__item-11, &.roadMap__item-12 {
-        margin-top: 38px;
+        margin-top: 58px;
 
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 980px) {
+        margin: 62px 0 34px;
       }
 
     }

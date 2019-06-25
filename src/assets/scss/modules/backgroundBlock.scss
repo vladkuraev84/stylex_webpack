@@ -11,7 +11,7 @@
 
 
     @media screen and (max-width: $tableWidth) {
-      height: 27rem;
+      height: 30rem;
     }
 
     @media screen and (max-width: 540px) {
@@ -36,6 +36,26 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+      &--txt {
+
+        @media screen and (min-width: 481px) and (max-width: $tableWidth) {
+          padding-top: 5rem;
+
+          .container {
+            max-width: 78%;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          padding-top: 5rem;
+
+            .container {
+              max-width: 100%;
+            }
+        }
+
+      }
   }
 
 }

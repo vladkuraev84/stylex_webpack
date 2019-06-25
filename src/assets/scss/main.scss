@@ -89,11 +89,11 @@ section, .section {
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 36px 0 28px;
   }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
+  @media screen and (max-width: $phoneBigWidth) {
+    padding: 36px 0 20px;
   }
 }
 
