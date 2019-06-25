@@ -117,13 +117,15 @@
 
     &__mob {
       background: none;
+      width: 50%;
 
         li {
           width: 96%;
           margin: 1%;
+          padding-bottom: 25px;
+          min-height: 175px;
 
           @media screen and (max-width: $phoneBigWidth) {
-            height: 155px;
             flex-direction: column;
             justify-content: flex-start;
             //padding-bottom: 46px;
@@ -138,29 +140,66 @@
 
 }
 
-.arrRight {
-  li {
-    position: relative;
+li.arrDown {
+  position: relative;
 
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 20px;
-        height: 20px;
-        background-image: url("/assets/img/arrow.svg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        -webkit-transform: rotateZ(90deg);
-        -moz-transform: rotateZ(90deg);
-        -ms-transform: rotateZ(90deg);
-        -o-transform: rotateZ(90deg);
-        transform: rotateZ(90deg);
-        margin-left: -10px;
-      }
-  }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background-image: url("/assets/img/arrow.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-transform: rotateZ(90deg);
+      -moz-transform: rotateZ(90deg);
+      -ms-transform: rotateZ(90deg);
+      -o-transform: rotateZ(90deg);
+      transform: rotateZ(90deg);
+      margin-left: -10px;
+    }
+}
+
+li.arrRight {
+  position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      background-image: url("/assets/img/arrow.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+}
+li.arrUp {
+  position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -26px;
+      left: 50%;
+      margin-left: -10px;
+      width: 20px;
+      height: 20px;
+      background-image: url("/assets/img/arrow.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-transform: rotateZ(-90deg);
+      -moz-transform: rotateZ(-90deg);
+      -ms-transform: rotateZ(-90deg);
+      -o-transform: rotateZ(-90deg);
+      transform: rotateZ(-90deg);
+    }
 }
 
 .slider {
