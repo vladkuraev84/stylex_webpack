@@ -67,6 +67,17 @@ button, a {
   }
 
 }
+
+button {
+  border: none;
+  outline: none;
+
+    &:hover, &:active, &:focus, &:active {
+      border: none;
+      outline: none;
+    }
+}
+
 ul, li {
   margin: 0;
   padding: 0;

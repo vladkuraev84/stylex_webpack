@@ -1,0 +1,137 @@
+
+.statistic {
+  &--wr {
+
+  }
+
+  &__top {
+    @include flex();
+
+    margin-bottom: 24px;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  &--btns {
+    @include flex(flex-end, center, row, nowrap);
+
+    ul {
+      @include flex(flex-end, center, row, nowrap);
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    button {
+      font-family: 'Roboto-Bold', sans-serif;
+      background: #EEEEEE;
+      font-size: 14px;
+      line-height: 24px;
+      width: 40px;
+      color: $customFontColor;
+      text-align: center;
+      padding: 5px 0 3px;
+      text-transform: uppercase;
+
+      &:hover {
+        background: #dadada;
+      }
+
+      &.gradient {
+        background: -o-linear-gradient(315deg,#38b870 0,#22b6b4 100%);
+        background: linear-gradient(135deg,#38b870,#22b6b4);
+        color: #ffffff;
+      }
+    }
+  }
+  &--period {
+    margin-right: 16px;
+  }
+  &--date {
+    ul {
+      @include flex(flex-start);
+      width: auto;
+      margin: 0 -12px;
+
+      @media screen and (max-width: 600px) {
+        margin: 0;
+      }
+    }
+
+    li {
+      flex: 1 1 0;
+      margin: 12px;
+      max-width: calc(25% - 24px);
+      min-width: 170px;
+      padding: 16px;
+      background: #ffffff;
+      -webkit-box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+      -moz-box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+
+      @media screen and (max-width: $phoneBigWidth) {
+        max-width: calc(33% - 24px);
+      }
+
+      @media screen and (max-width: 600px) {
+        width: calc(50% - 12px);
+        max-width: calc(50% - 12px);
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+          &:nth-child(2n+1) {
+            margin-left: 0;
+          }
+      }
+
+      @media screen and (max-width: $phoneWidth) {
+        min-width: 130px;
+        padding: 12px;
+      }
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 24px;
+      color: $customFontColor;
+      font-family: $Fontlight;
+
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 0;
+      margin-top: 6px;
+      font-family: $FontMedium;
+      white-space: nowrap;
+
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+    }
+  }
+
+  &--schedule {
+    margin-top: 12px;
+    padding: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+
+    @media screen and (max-width: $phoneBigWidth) {
+      padding: 10px;
+    }
+  }
+}
