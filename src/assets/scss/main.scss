@@ -214,6 +214,16 @@ section, .section {
     }
 }
 
+.greenGradient {
+  background: linear-gradient(135deg, #38b86f 0%, #22b6b4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mt60 {
+  margin-top: 3.75rem;
+}
+
 .display-flex {
   @include flex(flex-start, flex-start, row, nowrap);
 }
@@ -233,6 +243,8 @@ section, .section {
       display: none!important;
     }
 }
+
+
 // Modules
 @import "modules/wrapper.scss";
 

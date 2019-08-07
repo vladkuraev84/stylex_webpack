@@ -158,6 +158,14 @@ module.exports = {
         filename: 'terms.html',
         template: '!!html-loader?interpolate!src/terms.html'
     }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'franchise.html',
+        template: '!!html-loader?interpolate!src/franchise.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'statistic.html',
+        template: '!!html-loader?interpolate!src/statistic.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },

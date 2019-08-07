@@ -1,8 +1,10 @@
+@import "franchise";
 
 .customPage {
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto-Light', sans-serif;
     margin-bottom: 1.2rem;
+    color: $customFontColor;
   }
   p {
     margin-bottom: .8rem;

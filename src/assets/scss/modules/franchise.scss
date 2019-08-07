@@ -1,0 +1,160 @@
+
+.franchise {
+  &--wr {
+    .title {
+      margin-bottom: 54px;
+
+      @media screen and (max-width: $phoneBigWidth) {
+        margin-bottom: 16px;
+      }
+
+      &--sub {
+        font-size: 28px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+
+        &__ {
+          font-family: $Fontlight;
+          font-size: 22px;
+          margin-top: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 24px;
+      color: $customFontColor;
+      margin-bottom: 8px;
+      font-family: $Fontlight;
+
+        @media screen and (max-width: $phoneBigWidth) {
+          font-size: 15px;
+          line-height: 1.4;
+        }
+    }
+
+  }
+
+  &__item {
+    @include flex(space-between, center, row, nowrap);
+    margin-bottom: 2.5rem;
+
+    @media screen and (max-width: $phoneBigWidth) {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    &--img, &--txt {
+        flex: 1;
+      }
+
+      &--img {
+        @media screen and (max-width: $phoneBigWidth) {
+          padding: 10%;
+          text-align: center;
+
+            img {
+              max-width: 300px;
+            }
+        }
+      }
+
+      &--txt {
+        margin-left: 2rem;
+
+        @media screen and (max-width: $phoneBigWidth) {
+          margin-left: 0;
+        }
+
+        li {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+      }
+  }
+
+  &__list {
+    margin-bottom: 2rem;
+
+    ol {
+      counter-reset: item;
+      list-style-type: none;
+      padding: 0;
+
+      @include flex(space-between, flex-start, row, nowrap);
+      margin: 0 -12px;
+
+      @media screen and (max-width: $phoneBigWidth) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+      }
+
+    }
+    li {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 12px;
+
+      @media screen and (max-width: $phoneBigWidth) {
+        margin: 12px 0;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      &:before {
+        content: counter(item, decimal);
+        counter-increment: item;
+        width: 44px;
+        height: 44px;
+        background: #ffffff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-family: 'Roboto-Bold', sans-serif;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        color: #30b78a;
+
+        @media screen and (max-width: $phoneBigWidth) {
+          flex: none;
+          margin-right: 24px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: -3px;
+        top: -3px;
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: -o-linear-gradient(315deg,#38b86f 0,#22b6b4 100%);
+        background: linear-gradient(135deg,#38b86f,#22b6b4);
+      }
+
+        span {
+          display: inline-block;
+          margin-top: 1rem;
+
+          @media screen and (max-width: $phoneBigWidth) {
+            margin-top: 0;
+          }
+        }
+    }
+  }
+}
