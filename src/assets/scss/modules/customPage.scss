@@ -6,6 +6,10 @@
     font-family: 'Roboto-Light', sans-serif;
     margin-bottom: 1.2rem;
     color: $customFontColor;
+
+    @media screen and (max-width: $phoneBigWidth) {
+      font-size: 2rem;
+    }
   }
   p {
     margin-bottom: .8rem;

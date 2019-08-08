@@ -37,6 +37,11 @@
       text-decoration: none;
       color: $wh;
       min-width: 120px;
+
+      @media screen and (max-width: $tableWidth) {
+        min-width: auto;
+        line-height: normal;
+      }
     }
   }
 
@@ -87,13 +92,16 @@
     @include flex(space-between, center, center, nowrap);
     position: relative;
     z-index: 3;
+
+    @media screen and (max-width: $tableWidth) {
+      max-width: 120px;
+    }
   }
 
   .btnStylex, .menu-icon {
     @media screen and (max-width: $tableWidth) {
-      background: rgba(0, 0, 0, 0.5);
+      //background: rgba(0, 0, 0, 0.5);
       padding: 6px;
-      width: 75px;
     }
   }
 
@@ -109,7 +117,12 @@
   position: relative;
   z-index: 3;
 
-    img {
+  @media screen and (max-width: $tableWidth) {
+    flex: 1;
+    text-align: center;
+  }
+
+  img {
       min-width: 75px;
     }
 }

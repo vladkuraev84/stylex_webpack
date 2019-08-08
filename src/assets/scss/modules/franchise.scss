@@ -57,11 +57,11 @@
 
       &--img {
         @media screen and (max-width: $phoneBigWidth) {
-          padding: 10%;
+          padding: 5%;
           text-align: center;
 
             img {
-              max-width: 300px;
+              max-width: 260px;
             }
         }
       }
