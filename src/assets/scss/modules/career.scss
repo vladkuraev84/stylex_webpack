@@ -16,6 +16,8 @@ $green:  green;
     &__top {
       @include flex(space-between, center, row, nowrap);
       margin: 25px 0;
+      padding: 22px 24px;
+      background: #F2F2F2;
 
       p, span {
         font-family: 'Roboto-Light', sans-serif;
@@ -27,6 +29,7 @@ $green:  green;
         flex: 1;
         max-width: 30%;
         min-width: 170px;
+        margin-bottom: 0 !important;
       }
 
       span {

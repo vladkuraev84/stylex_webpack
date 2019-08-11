@@ -13,7 +13,8 @@
     }
 
     .copyright {
-      margin: 0 15px;
+      margin: 0 15px 0 20px;
+      flex: .6;
 
       @media screen and (max-width: 840px) {
         margin: 20px 0;
@@ -22,9 +23,10 @@
 
     &--nav {
       margin: 0 25px;
+      flex: .85;
 
       li {
-        min-width: 50%;
+        min-width: 32%;
       }
 
       @media screen and (max-width: 1060px) {
@@ -69,7 +71,7 @@
     }
 
     ul {
-      @include flex();
+      @include flex(start);
 
         li {
           flex: none;

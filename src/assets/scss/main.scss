@@ -152,6 +152,7 @@ section, .section {
 
   @media screen and (max-width: $phoneWidth) {
     font-size: 36px;
+    word-break: break-word;
   }
 
   @media screen and (max-width: 360px) {
