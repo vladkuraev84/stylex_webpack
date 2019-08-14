@@ -107,7 +107,7 @@ $blueDot: #212121;
       //@include transform(translate(-50%, -50%) rotate(-45deg));
     }
 
-    @media screen and (max-width: $tableWidth) {
+    @media screen and (max-width: 980px) {
       background: linear-gradient(135deg, #38b870 0%, #22b6b4 100%);
     }
 

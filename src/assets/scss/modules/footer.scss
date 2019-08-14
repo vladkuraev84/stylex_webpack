@@ -29,7 +29,7 @@
         min-width: 32%;
       }
 
-      @media screen and (max-width: 1060px) {
+      @media screen and (min-width: 841px)  and (max-width: 1060px) {
         margin: 0 15px;
       }
 
