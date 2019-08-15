@@ -1,0 +1,19 @@
+.modal {
+  display: none;
+}
+.modal.show {
+  display: block;
+  background: rgba(0,0,0,.5);
+}
+
+.modal-body h3 {
+    @media screen and (min-width: 1200px) {
+      text-align: center;
+      color: #333333;
+      margin-top: 24px;
+      font-size: 27px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: -0.34px;
+    }
+}

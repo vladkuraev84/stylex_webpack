@@ -1,0 +1,198 @@
+
+.formFin {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  padding: 24px 0;
+
+    &__logo {
+      @media screen and (min-width: $tableWidth) {
+        position: absolute;
+        left: 5%;
+        top: 5%;
+      }
+
+      z-index: 1;
+
+        img {
+          max-width: 120px;
+          width: 100%;
+        }
+    }
+
+  .title {
+    margin-top: 1.25rem;
+  }
+
+  &__block {
+    margin: 0 0 24px;
+    position: relative;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .label {
+        font-size: 16px;
+        display: block;
+
+        color: #999;
+        padding: 0 0 0 16px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        pointer-events: none;
+      }
+
+      input, .form-control {
+        font-size: 20px;
+        padding: 12px 16px;
+        background: #FFFFFF;
+        border: 1px solid #8FB1C2;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 3px #8FB1C2;
+        -moz-box-shadow: inset 0 1px 3px #8FB1C2;
+        box-shadow: inset 0 1px 3px #8FB1C2;
+      }
+
+
+    input, select, textarea {
+      width: 100%;
+    }
+
+    input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label {
+      font-size: 12px;
+      padding-left: 0;
+      color: #FFFFFF;
+      top: -18px;
+      -webkit-transition: all 0.225s ease;
+      transition: all 0.225s ease;
+    }
+  }
+
+  &__bottom {
+    @include flex(center, center, column, wrap);
+
+      .ops-area {
+        margin-top: 20px;
+        margin-bottom: 44px;
+        font-size: 18px;
+
+        p {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+
+      .formFin__link {
+        text-align: right;
+        display: inline-block;
+        font-size: 18px;
+        margin: 0;
+        text-decoration: underline;
+
+        @media screen and (min-width: $tableWidth) {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+
+      }
+
+      button, a, p {
+        font-size: 20px;
+        color: #FFFFFF;
+      }
+
+      button {
+        position: relative;
+        width: 100%;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+
+          img {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+      }
+
+      p {
+        margin: 20px 0;
+      }
+  }
+}
+
+#captcha_container {
+  padding-top: 30px;
+}
+
+.anCaptcha {
+  position: relative;
+  margin-bottom: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  max-width: 380px;
+
+    &:before {
+      content:"Соберите пазл";
+      position:absolute;
+      color: #FFFFFF;
+      width: 100%;
+      top: -30px;
+      left: 0;
+      font-size: 16px;
+      z-index:2;
+    }
+
+    &_wrap{
+      position:fixed;
+      display:none;
+      opacity:0;
+      top:0px;
+      left:0px;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+      transition: all 0.5s ease-in-out;
+    }
+}
+
+#anImage {
+  -webkit-box-shadow: inset 0 1px 3px #8FB1C2;
+  -moz-box-shadow: inset 0 1px 3px #8FB1C2;
+  box-shadow: inset 0 1px 3px #8FB1C2;
+}
+
+.recaptcha-2 {
+  div {
+    width: 100% !important;
+  }
+
+  canvas {
+    width: 100%;
+  }
+
+  #kc_sample_image_div {
+    width: 75px !important;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

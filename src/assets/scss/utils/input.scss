@@ -1,3 +1,9 @@
+input, select, textarea {
+  &:hover, &:focus, &:visited, &:active {
+    outline: none;
+    border-color: transparent;
+  }
+}
 
 .input{
   &--block {

@@ -5,9 +5,11 @@ const toggleLanguages = () => {
     ar.parentNode.classList.toggle('languages-block--open');
 };
 
-ar.addEventListener("click", () => {
-    toggleLanguages();
-});
+if (ar) {
+    ar.addEventListener("click", () => {
+        toggleLanguages();
+    });
+}
 
 let hamburger = document.querySelector('.menu-icon');
 let menu = document.querySelector('nav');
@@ -16,11 +18,13 @@ const toggleMenu = () => {
     menu.classList.toggle('active');
 };
 
-hamburger.addEventListener('click', e => {
-    e.stopPropagation();
+if (hamburger) {
+    hamburger.addEventListener('click', e => {
+        e.stopPropagation();
 
-    toggleMenu();
-});
+        toggleMenu();
+    });
+}
 
 document.addEventListener('click', e => {
     let target = e.target;
@@ -133,4 +137,9 @@ $( document ).ready(function() {
         let parent = $(this).parent().parent();
         parent.find('.tasks--item__bot').slideToggle();
     });
+
+    $('.modal .close').click(function() {
+        $('#siteAlertWidgetModal').toggleClass('show');
+    });
+
 });

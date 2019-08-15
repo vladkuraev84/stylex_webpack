@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+${require('./views/head.html')}
+
+<body>
+
+<!-- main wrapper -->
+<div class="wrapper">
+    <div id="app">
+
+        <div class="content-wrapper">
+
+            <div class="background__block--wr">
+
+                <div class="background__block background--full">
+                    <div class="formFin__logo text-center">
+                        <a href=""><img src="/assets/img/logo_.png" alt="logo"></a>
+                    </div>
+
+                    <div class="background__item" style="filter: blur(6px);
+                        -webkit-filter: blur(6px);
+                        -moz-filter: blur(6px);
+                        -o-filter: blur(6px);
+                        -ms-filter: blur(6px);">
+
+                    </div>
+
+                    <div class="formFin">
+
+                        <h4 class="title text-center white">Войти</h4>
+
+                        <form method="post" class="js-form">
+                            <div class="formFin__block">
+                                <input type="text" name="login" class="form-control login" required>
+                                <label class="label">E-mail</label>
+                            </div>
+                            <div class="formFin__block">
+                                <input name="password" class="form-control password" type="password" required>
+                                <label class="label">Пароль</label>
+                            </div>
+
+
+                            <div id="captcha_container">
+                                <div class="anCaptcha" data-timeout="210">
+                                    <div id="anImage">
+                                        <img src="/an-captcha/handler.php?image&amp;0.7285644271596083" onload="window.anCaptcha.run()">
+                                        <div id="anCaptcha_el0" style="left: 76%; top: 15%;">
+                                            <img src="/an-captcha/tmp/5452138925d558fbcea237/5d558fbceac08.png">
+                                        </div>
+                                        <div id="anCaptcha_el1" style="left: 78%; top: 17%;">
+                                            <img src="/an-captcha/tmp/5452138925d558fbcea237/5d558fbcf3539.png">
+                                        </div>
+                                        <div id="anCaptcha_el2" style="left: 85%; top: 77%;">
+                                            <img src="/an-captcha/tmp/5452138925d558fbcea237/5d558fbd06a9e.png">
+                                        </div>
+                                    </div>
+                                    <div id="anSlider" class="range-slider range-slider-horizontal">
+                                        <div class="range-slider-track">
+                                            <span class="dragger" style="left: -22.5px;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script> window.anCaptcha.init('captcha_container'); </script>
+
+
+                            <div class="text-center formFin__bottom">
+                                <button type="submit" class="btnStylex btnStylex--green" onclick="FormC.ajax.send(); return false">
+                                    <span class="loader-gif-1">
+                                        <img src="/img/loading.gif">
+                                    </span>
+                                    Вход
+                                </button>
+
+                                <a href="" class="formFin__link">Забыли пароль?</a>
+                                
+                                <p>или</p>
+
+                                <a href="" class="formFin__link">Зарегистрироваться</a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

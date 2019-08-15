@@ -25,6 +25,19 @@
 
   }
 
+  &--full {
+    margin-top: 0;
+    height: auto !important;
+    min-height: 100vh !important;
+
+      @media screen and (max-width: $phoneBigWidth) {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 24px 12px 34px;
+      }
+
+  }
+
 
   &__item {
     position: absolute;

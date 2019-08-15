@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+${require('./views/head.html')}
+
+<body>
+
+<!-- main wrapper -->
+<div class="wrapper">
+    <div id="app">
+
+        <div class="content-wrapper">
+
+            <div class="background__block--wr">
+
+                <div class="background__block background--full">
+                    <div class="formFin__logo text-center">
+                        <a href=""><img src="/assets/img/logo_.png" alt="logo"></a>
+                    </div>
+
+                    <div class="background__item" style="filter: blur(6px);
+                        -webkit-filter: blur(6px);
+                        -moz-filter: blur(6px);
+                        -o-filter: blur(6px);
+                        -ms-filter: blur(6px);">
+
+                    </div>
+
+                    <div class="formFin">
+
+                        <h4 class="title text-center white">Регистрация</h4>
+
+                        <form id="form-signup" class="clbc-form" action="" method="post">
+                            <input id="form-token" type="hidden" name="_csrf" value="">
+
+                            <a href="" class="logo-n" style="display: block"></a>
+
+                            <div class="formFin__block">
+                                <div class="field-signupform-name required tooltip-info">
+                                    <input type="text" id="signupform-name" class="form-control" autocomplete="off" name="SignupForm[name]" value="" oninput="TransliteTextO.events.firstname.oninput(this)" data-toggle="tooltip" data-placement="right" data-original-title="Только латинские символы" required>
+                                    <label class="label">Имя</label>
+
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                            </div>
+
+
+                            <div class="formFin__block">
+                                <div class="field-signupform-surname required tooltip-info">
+                                    <input type="text" id="signupform-surname" class="form-control" name="SignupForm[surname]" autocomplete="off" oninput="TransliteTextO.events.lastname.oninput(this)" value="" data-toggle="tooltip" data-placement="right" data-original-title="Только латинские символы	" required>
+                                    <label class="label">Фамилия</label>
+
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                            </div>
+                            <div class="formFin__block">
+                                <div class="field-signupform-email required  tooltip-info">
+                                    <input type="email" id="signupform-email" class="form-control" name="SignupForm[email]" oninput="maileventert();" value="" data-toggle="tooltip" data-placement="right" data-original-title="Введите Ваш email	" required>
+                                    <label class="label">E-mail</label>
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-section tooltip-info" style="display: none">
+                            </div>
+
+                            <div class="formFin__block tooltip-info">
+                                <div class="field-signupform-password required">
+                                    <input type="password" id="signupform-password" class="form-control js-password" name="SignupForm[password]" data-toggle="tooltip" data-placement="right" data-original-title="Пароль должен содержать минимум 6 символов, одну заглавную и одну прописную букву" oninput="FormC.inputs.password.input()" aria-autocomplete="list" required>
+                                    <label class="label">Пароль</label>
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                            </div>
+                            <div class="formFin__block tooltip-info">
+                                <div class="field-signupform-passwordrepeat">
+                                    <input type="password" id="signupform-passwordrepeat" class="form-control js-password-repeat" name="SignupForm[passwordRepeat]" data-toggle="tooltip" data-placement="right" data-original-title="Пароли должны совпадать" oninput="FormC.inputs.passwordRepeat.input()" required>
+                                    <label class="label">Подтверждение пароля</label>
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                            </div>
+                            <div class="formFin__block">
+                                <div class="field-signupform-invite">
+                                    <input type="text" id="signupform-invite" class="form-control trig-click" name="SignupForm[invite]" value="" data-toggle="tooltip" data-placement="bottom" data-original-title="  " oninput="FormC.inputs.invite.input(this); return false;" onclick="FormC.inputs.invite.click(this); return false;" required>
+                                    <label class="label">ID Вашего спонсора</label>
+                                </div>
+                            </div>
+
+                            <div class="text-center formFin__bottom">
+
+                                <div class="ops-area">
+                                    <p>Нажимая "Зарегистрироваться" либо авторизируясь через соц. сети, вы принимаете условия
+                                        <a href="" class="formFin__link">
+                                            Пользовательского соглашения</a>
+                                        и <br />
+                                        <a href="" class="formFin__link">
+                                            Политики конфиденциальности</a>
+                                    </p>
+                                </div>
+
+                                <button type="submit" class="btnStylex btnStylex--green" onclick="FormC.ajax.send(); return false">
+                                    <span class="loader-gif-1">
+                                        <img src="/img/loading.gif">
+                                    </span>
+                                    Зарегистрироваться
+                                </button>
+
+                                <p>Уже есть аккаунт?</p>
+
+                                <a href="" class="formFin__link">Войдите</a>
+                            </div>
+
+                            <script>
+                                let tooltipPosition = 'right';
+
+                                if($(window).width() < 768)
+                                    tooltipPosition = 'bottom';
+
+
+
+                                $('.tooltip-info').each(function() {
+                                    $(this).find('input').attr('data-placement', tooltipPosition);
+                                });
+
+                            </script>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

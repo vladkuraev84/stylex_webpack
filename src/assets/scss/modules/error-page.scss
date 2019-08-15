@@ -1,0 +1,46 @@
+
+.error-page {
+  flex-direction: column !important;
+
+  &--img {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+
+    img {
+      max-width: 360px;
+      width: 100%;
+    }
+  }
+  &--info {
+    position: relative;
+  }
+
+  &--title {
+    color: #FFFFFF;
+    font-size: 30px;
+    margin: 0 0 30px;
+    line-height: 1;
+  }
+
+  &--txt {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 20px;
+  }
+
+  &--link {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-decoration: underline;
+
+    @media screen and (min-width: $tableWidth) {
+      &:hover {
+        color: #b9cbde;
+      }
+    }
+
+
+  }
+}

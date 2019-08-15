@@ -166,6 +166,26 @@ module.exports = {
         filename: 'statistic.html',
         template: '!!html-loader?interpolate!src/statistic.html'
     }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'login2.html',
+        template: '!!html-loader?interpolate!src/login2.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'registration.html',
+        template: '!!html-loader?interpolate!src/registration.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'thank-you.html',
+        template: '!!html-loader?interpolate!src/thank-you.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'forgot-password.html',
+        template: '!!html-loader?interpolate!src/forgot-password.html'
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'change-password.html',
+        template: '!!html-loader?interpolate!src/change-password.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
