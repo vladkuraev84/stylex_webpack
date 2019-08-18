@@ -43,12 +43,12 @@
     }
 
     @media screen and (min-width: 361px)  and (max-width: 414px) {
-      height: 13.5rem;
+      height: 14.5rem;
       width: 100%;
     }
 
     @media screen and (max-width: 360px) {
-      height: 12.5rem;
+      height: 13.5rem;
       width: 100%;
     }
   }
@@ -102,4 +102,12 @@
   -moz-filter: blur(4px);
   -o-filter: blur(4px);
   -ms-filter: blur(4px);
+
+    @media screen and (max-width: 767px) {
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+    }
 }
