@@ -38,7 +38,28 @@
 
     @media screen and (max-width: 767px) {
       max-width: 100%;
+      overflow: hidden;
     }
   }
 
+}
+
+.main-table--wr {
+  overflow-x: auto;
+}
+
+.main-table--wr::-webkit-scrollbar {
+  width: 12px;
+  height: 6px;
+}
+
+.main-table--wr::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.main-table--wr::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg,#38b870,#22b6b4);
 }
