@@ -1,0 +1,242 @@
+
+.team {
+  &--block {
+    .title {
+      margin-bottom: 20px;
+
+      +p {
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: auto;
+      }
+    }
+
+    &__list {
+      margin-top: 45px;
+
+      ul {
+        @include flex(center, center, row, wrap);
+        width: auto;
+        margin: 0 -26px;
+
+        @media screen and (max-width: 1360px) {
+          margin: 0;
+        }
+
+        @media screen and (max-width: $smDesktopWidth) {
+          justify-content: center;
+        }
+      }
+
+      li {
+        max-width: 252px;
+        width: 100%;
+        margin: 0 26px 26px;
+
+        @media screen and (max-width: $phoneBigWidth) {
+          display: none;
+
+          &:nth-child(-n+4) {
+            display: inline-block;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  &__item {
+    position: relative;
+
+    &.show-description {
+      overflow: hidden;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+
+      .team__description {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &--name {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      margin-top: 20px;
+      font-family: $FontMedium;
+    }
+
+    &--position {
+      font-family: $Fontlight;
+      display: inline-block;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.2px;
+      color: #999999;
+    }
+
+    @media screen and (min-width: $tableWidth) {
+      &:hover {
+        overflow: hidden;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+
+        .team__description {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+  }
+
+  &__description {
+
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(328.6deg, #3CB6B0 3.86%, #3BB792 50.14%, #3AB871 94.53%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    color: $wh;
+    overflow: hidden;
+
+    -webkit-transition: .2s all;
+    -moz-transition: .2s all;
+    -ms-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+
+    &--main {
+      padding: 24px 20px;
+      overflow-y: auto;
+      height: 100%;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #153319;
+        outline: 1px solid #215c2e;
+      }
+    }
+
+    &--name {
+      font-family: $FontMedium;
+      margin-bottom: 6px;
+      line-height: 1.1875;
+      padding-right: 24px;
+    }
+
+    &--position {
+      margin-bottom: 12px;
+      font-family: $Fontlight;
+      line-height: 1.1875;
+    }
+
+    &--info {
+      font-size: 14px;
+      font-family: $mainFont;
+      line-height: 1.5;
+    }
+
+
+    &__detail--mob {
+      margin-top: 16px;
+      margin-bottom: 0;
+
+      @media screen and (min-width: $tableWidth) {
+        display: none;
+      }
+
+      .btnStylex {
+        font-family: $mainFont;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: #3CB6B0;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.description {
+
+  &-close {
+    cursor: pointer;
+
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    right: 16px;
+    top: 23px;
+
+    @media screen and (min-width: $tableWidth) {
+      display: none;
+    }
+
+    &:after, &:before {
+      position: absolute;
+      left: 10px;
+      top: 2px;
+      content: ' ';
+      height: 20px;
+      width: 3px;
+      background-color: #ffffff;
+    }
+
+    &:after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    &:before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+  }
+}
+
+.block--more {
+  margin-top: 27px;
+
+  @media screen and (min-width: $tableWidth) {
+    display: none;
+  }
+}

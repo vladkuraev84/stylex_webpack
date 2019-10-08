@@ -3,101 +3,105 @@
   background: #2f3231;
   padding: 30px 0 20px;
 
-    .container {
-      @include flex(space-between, center, center, nowrap);
+  .container {
+    @include flex(space-between, center, center, nowrap);
 
-      @media screen and (max-width: 840px) {
+    @media screen and (max-width: 980px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 840px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .copyright {
+    margin: 0 15px 0 20px;
+    flex: .6;
+
+    @media screen and (max-width: 840px) {
+      margin: 20px 0;
+    }
+  }
+
+  &--nav {
+    margin: 0 25px;
+    flex: .85;
+
+    li {
+      min-width: 32%;
+    }
+
+    @media screen and (max-width: 1060px) {
+      margin: 20px 15px;
+    }
+
+    @media screen and (max-width: 840px) {
+      margin: 20px 0;
+
+      ul {
         flex-direction: column;
         justify-content: center;
+
+        li {
+          text-align: center;
+          min-width: 100%;
+        }
+      }
+    }
+  }
+
+  p, a {
+    color: $wh;
+    font-size: .9375rem;
+  }
+
+  p {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  a {
+    margin: 10px 0;
+    text-decoration: underline;
+
+    @media screen and (min-width: 768px) {
+      &:hover {
+        text-decoration: none;
       }
     }
 
-    .copyright {
-      margin: 0 15px 0 20px;
-      flex: .6;
+  }
 
-      @media screen and (max-width: 840px) {
-        margin: 20px 0;
-      }
+  ul {
+    @include flex(start);
+
+    li {
+      flex: none;
+    }
+  }
+
+  &--coins {
+    ul {
+      flex-wrap: nowrap;
     }
 
-    &--nav {
-      margin: 0 25px;
-      flex: .85;
-
-      li {
-        min-width: 32%;
-      }
-
-      @media screen and (min-width: 841px)  and (max-width: 1060px) {
-        margin: 0 15px;
-      }
-
-      @media screen and (max-width: 840px) {
-        margin: 20px 0;
-
-          ul {
-            flex-direction: column;
-            justify-content: center;
-
-              li {
-                text-align: center;
-                min-width: 100%;
-              }
-          }
-      }
-    }
-
-    p, a {
-      color: $wh;
-      font-size: .9375rem;
-    }
-
-    p {
-      margin: 0;
-      white-space: nowrap;
+    li {
+      margin: 5px;
     }
 
     a {
-      margin: 10px 0;
-      text-decoration: underline;
-
-      @media screen and (min-width: 768px) {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
+      font-size: 0;
     }
 
-    ul {
-      @include flex(start);
+    img {
+      width: 50px;
 
-        li {
-          flex: none;
-        }
-    }
-
-    &--coins {
-      ul {
-        flex-wrap: nowrap;
-      }
-
-      li {
-        margin: 5px;
-      }
-
-      a {
-        font-size: 0;
-      }
-
-      img {
-        width: 50px;
-
-        @media screen and (max-width: 1060px) {
-          width: 36px;
-        }
+      @media screen and (max-width: 1060px) {
+        width: 36px;
       }
     }
+  }
 
 }

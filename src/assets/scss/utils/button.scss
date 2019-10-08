@@ -72,3 +72,36 @@
         border: 2px solid #ffffff;
     }
 }
+.btnStylex--green__border {
+
+    border: 1px solid #3CB79E !important;
+    color: #3CB79E;
+    background: #ffffff;
+    text-transform: uppercase;
+
+
+    @media only screen and (min-width: 768px) {
+        &:hover {
+            color: $wh;
+            background: linear-gradient(135deg, #22b6b4 0%, #38b870 100%);
+            border: 1px solid #3CB79E;
+        }
+    }
+}
+
+.btnStylex-more {
+
+    .hide-full-text {
+        display: none;
+    }
+
+    &.active {
+        .full_text {
+            display: none;
+        }
+
+        .hide-full-text {
+            display: inline-block;
+        }
+    }
+}

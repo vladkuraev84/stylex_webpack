@@ -142,4 +142,19 @@ $( document ).ready(function() {
         $('#siteAlertWidgetModal').toggleClass('show');
     });
 
+    $('.btnStylex-more').click(function(){
+        $('.team--block__list ul li:nth-child(n+5)').slideToggle('');
+
+        $(this).toggleClass('active');
+
+    });
+
+    $('.btnStylex-details').click(function(){
+        $(this).parents('.team__item').addClass('show-description');
+    });
+
+    $('.description-close').click(function(){
+        $(this).parents().removeClass('show-description');
+    });
+
 });
