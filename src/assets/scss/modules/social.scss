@@ -1,0 +1,47 @@
+
+.social {
+  padding: 0 16px;
+  flex: .5;
+
+  @media screen and (max-width: 840px) {
+    width: 50%;
+    flex: 1 auto;
+  }
+
+  ul {
+    @include flex(center, center, row, nowrap);
+
+    @media screen and (min-width: 841px) and (max-width: 990px) {
+      flex-direction: column;
+    }
+  }
+
+  li {
+    margin: 5px 10px;
+
+    @media screen and (max-width: 840px) {
+      margin: 5px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    opacity: .8;
+
+    @media screen and (min-width: 841px) and (max-width: 990px) {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 841px) {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
