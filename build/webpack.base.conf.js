@@ -190,6 +190,10 @@ module.exports = {
         filename: 'documents.html',
         template: '!!html-loader?interpolate!src/documents.html'
     }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: 'robot-terms.html',
+        template: '!!html-loader?interpolate!src/robot-terms.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },

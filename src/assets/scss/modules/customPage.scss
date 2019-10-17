@@ -42,6 +42,42 @@
     }
   }
 
+  &-table {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    overflow: auto;
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #9c9c9c;
+      padding: 12px 8px;
+
+      @media screen and (max-width: $smDesktopWidth) {
+        padding: 6px 4px;
+      }
+    }
+
+    th {
+      font-size: 14px;
+
+        @media screen and (max-width: $smDesktopWidth) {
+          font-size: 12px;
+        }
+    }
+
+    td {
+      white-space: nowrap;
+      text-align: right;
+
+        &:first-child, &:nth-child(2) {
+          text-align: left;
+        }
+    }
+  }
+
 }
 
 .main-table--wr {
